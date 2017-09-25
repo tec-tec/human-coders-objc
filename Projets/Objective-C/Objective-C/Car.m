@@ -23,6 +23,9 @@
     Car *f = [[Car alloc] init];
     [f setBrand:@"Ferrari"];
 
+    // Pour de la localisation
+    NSLocalizedString(@"VALIDATE_BUTTON", @"This is the text for the validate button");
+
     return f;
 }
 
