@@ -25,7 +25,17 @@
     [aCar setSpeed: 100];
     [aCar setSpeed: 100 numberOfPassengers: 4 andDestination: @"Paris"];
 
+    NSString *aString = @"Une string";
+    id obj = aString;
+    NSArray *anArray = obj;
 
+    if ([obj isKindOfClass:[NSArray class]]) {
+        [obj count];
+        NSLog(@"It's an array");
+    } else if ([obj isKindOfClass:[NSString class]]) {
+        [obj length];
+        NSLog(@"It's a string");
+    }
 
 
 
