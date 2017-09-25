@@ -12,6 +12,10 @@
 
 - (void)setSpeed:(int)speed numberOfPassengers:(int)passengers andDestination:(NSString *)dest {
 
+    _speed = speed;
+
+    // Bonne pratique
+    [self setSpeed:speed];
 }
 
 + (Car *)ferrari {
