@@ -19,20 +19,28 @@
 
 - (instancetype)init
 {
-    self = [super init];
+    self = [self initWithBrand:@""];
     if (self) {
-        [self setBrand:@""];
-        [self setSpeed:0];
+
     }
     return self;
 }
 
 - (instancetype)initWithBrand:(NSString*)b
 {
+    self = [self initWithBrand:b andSpeed:0];
+    if (self) {
+
+    }
+    return self;
+}
+
+- (instancetype)initWithBrand:(NSString*)b andSpeed:(int)s
+{
     self = [super init];
     if (self) {
         [self setBrand:b];
-        [self setSpeed:0];
+        [self setSpeed:s];
     }
     return self;
 }
