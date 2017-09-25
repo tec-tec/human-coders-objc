@@ -10,4 +10,8 @@
 
 @implementation Car
 
+- (void)setSpeed:(int)speed numberOfPassengers:(int)passengers andDestination:(NSString *)dest {
+    
+}
+
 @end
