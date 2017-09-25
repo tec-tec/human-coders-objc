@@ -14,6 +14,7 @@
 @property (nonatomic) int speed;
 
 - (instancetype)initWithBrand:(NSString*)b;
+- (instancetype)initWithBrand:(NSString*)b andSpeed:(int)s;
 
 - (void)setSpeed:(int)speed numberOfPassengers:(int)passengers andDestination:(NSString*)dest;
 + (Car *)ferrari;

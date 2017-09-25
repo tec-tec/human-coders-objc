@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Car.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    [car speed];
-    [car setSpeed: 100];
-    [car setSpeed: 100 numberOFPassengers: 4 andDestination: @"Paris"];
+    Car* aCar = [[Car alloc] initWithBrand:@"Porsche" andSpeed:0];
+
+    [aCar speed];
+    [aCar setSpeed: 100];
+    [aCar setSpeed: 100 numberOfPassengers: 4 andDestination: @"Paris"];
 
 
 
