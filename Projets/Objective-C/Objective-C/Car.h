@@ -10,4 +10,9 @@
 
 @interface Car : NSObject
 
+@property (strong, nonatomic) NSString *brand;
+@property (nonatomic) int speed;
+
+- (void)setSpeed:(int)speed numberOfPassengers:(int)passengers andDestination:(NSString*)dest;
+
 @end
