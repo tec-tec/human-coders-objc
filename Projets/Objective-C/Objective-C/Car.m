@@ -17,6 +17,15 @@
 
 @implementation Car
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (void)setSpeed:(int)speed numberOfPassengers:(int)passengers andDestination:(NSString *)dest {
 
     _speed = speed;
