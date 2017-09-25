@@ -11,7 +11,15 @@
 @implementation Car
 
 - (void)setSpeed:(int)speed numberOfPassengers:(int)passengers andDestination:(NSString *)dest {
-    
+
+}
+
++ (Car *)ferrari {
+
+    Car *f = [[Car alloc] init];
+    [f setBrand:@"Ferrari"];
+
+    return f;
 }
 
 @end
