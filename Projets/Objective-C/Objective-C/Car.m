@@ -21,7 +21,18 @@
 {
     self = [super init];
     if (self) {
-        
+        [self setBrand:@""];
+        [self setSpeed:0];
+    }
+    return self;
+}
+
+- (instancetype)initWithBrand:(NSString*)b
+{
+    self = [super init];
+    if (self) {
+        [self setBrand:b];
+        [self setSpeed:0];
     }
     return self;
 }

@@ -13,6 +13,8 @@
 @property (strong, nonatomic) NSString *brand;
 @property (nonatomic) int speed;
 
+- (instancetype)initWithBrand:(NSString*)b;
+
 - (void)setSpeed:(int)speed numberOfPassengers:(int)passengers andDestination:(NSString*)dest;
 + (Car *)ferrari;
 
