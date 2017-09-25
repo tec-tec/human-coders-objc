@@ -8,7 +8,7 @@
 
 #import "Car.h"
 
-// Catégorie anonyme, pour définir les méthodes/propriétés anonymes
+// Catégorie anonyme, pour définir les méthodes/propriétés privé
 @interface Car ()
 
 @property (strong, nonatomic) NSString *privateProperty;
