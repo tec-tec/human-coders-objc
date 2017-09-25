@@ -13,6 +13,7 @@
 		33DB2ECD1F7927C400788CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DB2ECC1F7927C400788CA4 /* Assets.xcassets */; };
 		33DB2ED01F7927C400788CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DB2ECE1F7927C400788CA4 /* LaunchScreen.storyboard */; };
 		33DB2ED31F7927C400788CA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2ED21F7927C400788CA4 /* main.m */; };
+		33DB2EDB1F79366D00788CA4 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2EDA1F79366D00788CA4 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		33DB2ECF1F7927C400788CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33DB2ED11F7927C400788CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33DB2ED21F7927C400788CA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33DB2ED91F79366D00788CA4 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		33DB2EDA1F79366D00788CA4 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				33DB2EC31F7927C400788CA4 /* AppDelegate.h */,
 				33DB2EC41F7927C400788CA4 /* AppDelegate.m */,
+				33DB2ED91F79366D00788CA4 /* Car.h */,
+				33DB2EDA1F79366D00788CA4 /* Car.m */,
 				33DB2EC61F7927C400788CA4 /* ViewController.h */,
 				33DB2EC71F7927C400788CA4 /* ViewController.m */,
 				33DB2EC91F7927C400788CA4 /* Main.storyboard */,
@@ -144,6 +149,7 @@
 			files = (
 				33DB2EC81F7927C400788CA4 /* ViewController.m in Sources */,
 				33DB2ED31F7927C400788CA4 /* main.m in Sources */,
+				33DB2EDB1F79366D00788CA4 /* Car.m in Sources */,
 				33DB2EC51F7927C400788CA4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
