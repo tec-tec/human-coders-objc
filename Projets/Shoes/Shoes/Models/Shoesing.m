@@ -8,6 +8,22 @@
 
 #import "Shoesing.h"
 
+@interface Shoesing ()
+
+@property (strong, nonatomic) NSArray<NSString *> *shoesArray;
+
+@end
+
 @implementation Shoesing
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.shoesArray = @[@"Shoe 1", @"Shoe2"];
+
+    }
+    return self;
+}
 
 @end
