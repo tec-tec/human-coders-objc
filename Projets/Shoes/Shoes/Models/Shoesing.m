@@ -7,10 +7,11 @@
 //
 
 #import "Shoesing.h"
+#import "Shoes.h"
 
 @interface Shoesing ()
 
-@property (strong, nonatomic) NSArray<NSString *> *shoesArray;
+@property (strong, nonatomic) NSArray<Shoes *> *shoesArray;
 
 @end
 
@@ -20,9 +21,40 @@
 {
     self = [super init];
     if (self) {
-        self.shoesArray = @[@"Shoe 1", @"Shoe2"];
+        self.shoesArray = @[];
     }
     return self;
+}
+
+- (NSArray<Shoes *> *)allShoes {
+    return [self.shoesArray copy];
+}
+
+- (void)addShoes:(Shoes *)s {
+    self.shoesArray = [self.shoesArray arrayByAddingObject:s];
+}
+
+- (void)removeShoes:(Shoes *)s {
+    NSMutableArray<Shoes*> *mutCopy = self.shoesArray.mutableCopy;
+    [mutCopy removeObject:s];
+    self.shoesArray = [NSArray arrayWithArray:mutCopy];
+}
+
++ (nonnull Shoesing *)demoShoeshing {
+
+    Shoesing *s = [[Shoesing alloc] init];
+
+    for (int i = 0; i<=10; i++) {
+        int size = arc4random_uniform(8);
+        int type = arc4random_uniform(4);
+        NSString *brand = [NSString stringWithFormat:@"Marque %d", i];
+        NSString *color = [NSString stringWithFormat:@"Couleur %d", i];
+
+        Shoes *shoes = [[Shoes alloc] initWithBrand:brand color:color size:size andType:type];
+        [s addShoes:shoes];
+    }
+
+    return s;
 }
 
 @end

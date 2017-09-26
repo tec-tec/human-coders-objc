@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Shoes;
 
 @interface Shoesing : NSObject
 
+- (void)addShoes:(nonnull Shoes *)s;
+- (void)removeShoes:(nonnull Shoes *)s;
+- (nonnull NSArray<Shoes*> *)allShoes;
 
++ (nonnull Shoesing *)demoShoeshing;
 @end
