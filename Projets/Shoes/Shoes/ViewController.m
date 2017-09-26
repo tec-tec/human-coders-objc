@@ -10,6 +10,10 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *demoLabel;
+
+- (IBAction)showHelloWorld:(UIButton *)sender;
+
 @end
 
 @implementation ViewController
@@ -25,5 +29,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)showHelloWorld:(UIButton *)sender {
+    
+}
 
 @end
