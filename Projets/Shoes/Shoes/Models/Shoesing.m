@@ -21,7 +21,6 @@
     self = [super init];
     if (self) {
         self.shoesArray = @[@"Shoe 1", @"Shoe2"];
-
     }
     return self;
 }

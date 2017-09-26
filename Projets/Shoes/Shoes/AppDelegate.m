@@ -16,15 +16,29 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-
+- (void)demoDescription {
     Shoes *s = [[Shoes alloc] initWithBrand:@"Nike" color:@"Rose poudré" size:38 andType:ShoeTypeNight];
 
     NSLog(@"%@", s);
+}
+
+- (void)demoDictionary {
+
+    NSDictionary<NSString* , NSString*> *dict = @{@"firstName":@"Ludovic", @"lastName":@"Ollagnier"};
+    NSLog(@"%@",[dict objectForKey:@"firstName"]);
+    NSLog(@"%@",dict[@"firstName"]);
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+
+    [self demoDescription];
+    [self demoDictionary];
 
     return YES;
 }
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
