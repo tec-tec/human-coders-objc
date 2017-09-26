@@ -8,8 +8,10 @@
 
 #import "Shoes.h"
 
+// Extension interface ou catégorie anonyme
 @interface Shoes ()
 
+//Permet de générer un setter "privé", car readonly dans le .h
 @property (strong, nonatomic) NSString *uuid;
 
 @end
