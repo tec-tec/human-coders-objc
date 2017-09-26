@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, ShoeType) {
+    ShoeTypeSport,
+    ShoeTypeNight,
+    ShoeTypeBallet,
+    ShoeTypeBoot,
+    ShoeTypeFlipFlopSandals
+};
+
 @interface Shoes : NSObject
+
+@property (strong, nonatomic) NSString *brand;
+@property (strong, nonatomic) NSString *color;
+@property (nonatomic) int size;
+@property (nonatomic) ShoeType type;
+
 
 @end
