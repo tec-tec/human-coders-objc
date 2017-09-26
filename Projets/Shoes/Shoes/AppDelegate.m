@@ -33,6 +33,19 @@
     mutDict[@"Clé"] = @"Autre chose";
 }
 
+- (void)demoSet {
+
+    NSSet *s = [[NSSet alloc] initWithArray:@[@"Paris", @"Marseille", @"Lyon"]];
+    NSSet *s2 = [[NSSet alloc] initWithArray:@[@"Bordeaux", @"Toulouse", @"Lyon"]];
+
+    [s intersectsSet:s2];
+    
+    NSMutableSet *mutS = [s mutableCopy];
+    [mutS minusSet:s2];
+    NSLog(@"%@", mutS );
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
