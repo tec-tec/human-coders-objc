@@ -27,8 +27,17 @@
     [myButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     myButton.frame = CGRectMake(50, 50, 100, 20);
     [self.view addSubview:myButton];
+
+    [myButton addTarget:self action:@selector(showCodeLabel) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)showCodeLabel {
+
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(200, 50, 200, 30)];
+    lbl.text = @"Mon label code";
+
+    [self.view addSubview:lbl];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
