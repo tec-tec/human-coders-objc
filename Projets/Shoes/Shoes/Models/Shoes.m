@@ -17,7 +17,7 @@
         self.color = color;
         self.size = size;
         self.type = type;
-        self.uuid = [[[NSUUID alloc] init] UUIDString];
+        self.uuid = [[NSUUID alloc] init].UUIDString;
     }
     return self;
 }
