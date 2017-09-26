@@ -53,4 +53,9 @@
         NSLog(@"This is not my current shoes");
     }
 }
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Chaussure de marque %@, pointure: %d", self.brand, self.size];
+}
+
 @end
