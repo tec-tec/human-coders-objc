@@ -39,7 +39,7 @@
     NSSet *s2 = [[NSSet alloc] initWithArray:@[@"Bordeaux", @"Toulouse", @"Lyon"]];
 
     [s intersectsSet:s2];
-    
+
     NSMutableSet *mutS = [s mutableCopy];
     [mutS minusSet:s2];
     NSLog(@"%@", mutS );
@@ -51,6 +51,7 @@
 
     [self demoDescription];
     [self demoDictionary];
+    [self demoSet];
 
     return YES;
 }
