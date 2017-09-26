@@ -31,7 +31,7 @@
 
 
 - (IBAction)showHelloWorld:(UIButton *)sender {
-    
+    self.demoLabel.text = @"Hello";
 }
 
 @end
