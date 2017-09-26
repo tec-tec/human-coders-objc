@@ -27,6 +27,10 @@
     NSDictionary<NSString* , NSString*> *dict = @{@"firstName":@"Ludovic", @"lastName":@"Ollagnier"};
     NSLog(@"%@",[dict objectForKey:@"firstName"]);
     NSLog(@"%@",dict[@"firstName"]);
+
+    NSMutableDictionary *mutDict = [dict mutableCopy];
+    [mutDict setObject:@"Truc" forKey:@"Clé"];
+    mutDict[@"Clé"] = @"Autre chose";
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
