@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, ShoeType) {
 
 @property (strong, nonatomic) NSString *brand;
 @property (strong, nonatomic) NSString *color;
-@property (strong, nonatomic) NSString *uuid;
+@property (strong, nonatomic, readonly) NSString *uuid;
 @property (nonatomic) int size;
 @property (nonatomic) ShoeType type;
 @property (nonatomic, getter=isWorn) BOOL worn;

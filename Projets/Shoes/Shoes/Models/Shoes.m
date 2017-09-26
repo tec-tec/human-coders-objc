@@ -8,7 +8,22 @@
 
 #import "Shoes.h"
 
+@interface Shoes ()
+
+@property (strong, nonatomic) NSString *uuid;
+
+@end
+
 @implementation Shoes
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.uuid = [[NSUUID alloc] init].UUIDString;
+    }
+    return self;
+}
 
 - (instancetype)initWithBrand:(NSString*)brand color:(NSString*)color size:(int)size andType:(ShoeType)type {
     self = [super init];
