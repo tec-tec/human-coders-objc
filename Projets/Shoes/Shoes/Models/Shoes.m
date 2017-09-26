@@ -10,4 +10,28 @@
 
 @implementation Shoes
 
+- (instancetype)initWithBrand:(NSString*)brand color:(NSString*)color size:(int)size andType:(ShoeType)type {
+    self = [super init];
+    if (self) {
+        self.brand = brand;
+        self.color = color;
+        self.size = size;
+        self.type = type;
+        self.uuid = [[[NSUUID alloc] init] UUIDString];
+    }
+    return self;
+}
+
+- (void)wear {
+    self.worn = YES;
+}
+
+- (void)unWear {
+
+    if (self.isWorn) {
+        self.worn = NO;
+    } else {
+        NSLog(@"This is not my current shoes");
+    }
+}
 @end
