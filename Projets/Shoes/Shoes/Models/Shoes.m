@@ -54,8 +54,8 @@
     }
 }
 
-//- (NSString *)description {
-//    return [NSString stringWithFormat:@"Chaussure de marque %@, pointure: %d", self.brand, self.size];
-//}
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Chaussure de marque %@, pointure: %d, %p", self.brand, self.size, self];
+}
 
 @end
