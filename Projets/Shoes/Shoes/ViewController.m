@@ -21,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    UIButton *myButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [myButton setTitle:@"Code button" forState:UIControlStateNormal];
+    [myButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    myButton.frame = CGRectMake(50, 50, 100, 20);
+    [self.view addSubview:myButton];
 }
 
 
