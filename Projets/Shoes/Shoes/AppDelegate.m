@@ -46,12 +46,22 @@
     
 }
 
+- (void)demoNumber {
+
+    NSNumber *n1 = [NSNumber numberWithInt:5];
+    [n1 intValue];
+
+    NSNumber *n2 = @YES;
+//    NSNumber *n2 = [NSNumber numberWithBool:YES];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
     [self demoDescription];
     [self demoDictionary];
     [self demoSet];
+    [self demoNumber];
 
     return YES;
 }
