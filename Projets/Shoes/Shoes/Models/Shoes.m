@@ -41,6 +41,8 @@
 
 - (void)wear {
     self.worn = YES;
+
+    NSLog(@"Je met mes %@", self.brand);
 }
 
 - (void)unWear {
