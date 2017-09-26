@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Shoes.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    Shoes *s = [[Shoes alloc] initWithBrand:@"Nike" color:@"Rose poudré" size:38 andType:ShoeTypeNight];
+
+    NSLog(@"%@", s);
+
     return YES;
 }
 
