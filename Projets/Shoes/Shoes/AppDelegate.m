@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Shoesing.h"
 #import "Shoes.h"
 
 @interface AppDelegate ()
@@ -55,6 +56,16 @@
 //    NSNumber *n2 = [NSNumber numberWithBool:YES];
 }
 
+- (void)testShoesing {
+    Shoesing *s = [Shoesing demoShoeshing];
+    NSLog(@"%ld",[[s allShoes] count]);
+
+    Shoes *firstShoes = [[s allShoes] firstObject];
+
+    [s removeShoes:firstShoes];
+    NSLog(@"%ld",[[s allShoes] count]);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
@@ -62,6 +73,8 @@
     [self demoDictionary];
     [self demoSet];
     [self demoNumber];
+
+    [self testShoesing];
 
     return YES;
 }
