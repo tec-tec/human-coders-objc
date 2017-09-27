@@ -7,10 +7,14 @@
 //
 
 #import "ShoesListViewController.h"
+#import "Shoes.h"
+#import "Shoesing.h"
 
 @interface ShoesListViewController ()
 
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSArray<Shoes*> *shoes;
+
 @end
 
 @implementation ShoesListViewController
@@ -19,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    self.shoes = [[Shoesing demoShoeshing] allShoes];
     [self makeUI];
 }
 
@@ -38,7 +43,7 @@
     [self.view addSubview:self.tableView];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.shoes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,8 +54,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"maCell"];
     }
 
-    cell.textLabel.text = [NSString stringWithFormat:@"Cellule %@", indexPath];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Detail %@", indexPath];
+    Shoes *currentShoes = self.shoes[indexPath.row];
+
+    cell.textLabel.text = currentShoes.brand;
+    cell.detailTextLabel.text = currentShoes.color;
 
     return cell;
 }
