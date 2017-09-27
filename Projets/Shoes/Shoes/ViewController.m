@@ -22,6 +22,8 @@
 @property (strong, nonatomic) UITextField *brandTextField;
 @property (strong, nonatomic) UISlider *demoSlider;
 
+@property (strong, nonatomic) Shoesing *shoesing;
+
 @end
 
 @implementation ViewController
@@ -84,6 +86,14 @@
 
 - (IBAction)showHelloWorld:(UIButton *)sender {
     self.demoLabel.text = @"Hello";
+}
+
+//Surcharge du getter pour lazy instanciation
+- (Shoesing *)shoesing {
+    if (_shoesing == nil) {
+        _shoesing = [[Shoesing alloc] init];
+    }
+    return _shoesing;
 }
 
 @end
