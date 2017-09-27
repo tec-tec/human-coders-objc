@@ -10,4 +10,6 @@
 
 @interface UIColor (MoreColors)
 
++ (UIColor *)pinkColor;
+
 @end
