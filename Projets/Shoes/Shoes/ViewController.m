@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Shoes.h"
 #import "Shoesing.h"
+#import "UIColor+MoreColors.h"
 
 @interface ViewController ()
 
@@ -70,7 +71,7 @@
 
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [saveButton setTitle:@"Save" forState:UIControlStateNormal];
-    [saveButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [saveButton setTitleColor:[UIColor pinkColor] forState:UIControlStateNormal];
     saveButton.frame = CGRectMake(16, 300, 100, 20);
     [self.view addSubview:saveButton];
 
