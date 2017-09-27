@@ -45,6 +45,8 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"maCell" forIndexPath:indexPath];
 
+    cell.textLabel.text = [NSString stringWithFormat:@"Cellule %@", indexPath];
+
     return cell;
 }
 
