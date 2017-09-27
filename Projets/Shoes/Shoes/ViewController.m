@@ -81,6 +81,12 @@
 
     //Perform a save from the form data
 
+    //Check du formulaire
+
+    if (self.brandTextField.text.length < 3) {
+        return;
+    }
+
     Shoes *myShoes = [[Shoes alloc] initWithBrand:self.brandTextField.text color:self.colorTextField.text size:self.demoSlider.value andType:ShoeTypeSport];
 
     [self.shoesing addShoes:myShoes];
