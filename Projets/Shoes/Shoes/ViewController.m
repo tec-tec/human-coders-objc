@@ -22,21 +22,43 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    UIButton *myButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [myButton setTitle:@"Code button" forState:UIControlStateNormal];
-    [myButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    myButton.frame = CGRectMake(50, 50, 100, 20);
-    [self.view addSubview:myButton];
-
-    [myButton addTarget:self action:@selector(showCodeLabel) forControlEvents:UIControlEventTouchUpInside];
+    [self makeUI];
 }
 
-- (void)showCodeLabel {
+- (void)makeUI {
 
-    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(200, 50, 200, 30)];
-    lbl.text = @"Mon label code";
+    UILabel *brandLabel = [[UILabel alloc] init];
+    brandLabel.frame = CGRectMake(16, 80, 100, 30);
+    brandLabel.text = @"Brand";
 
-    [self.view addSubview:lbl];
+    UILabel *sizeLabel = [[UILabel alloc] init];
+    sizeLabel.frame = CGRectMake(16, 150, 100, 30);
+    sizeLabel.text = @"Size";
+
+    UILabel *colorLabel = [[UILabel alloc] init];
+    colorLabel.frame = CGRectMake(16, 200, 100, 30);
+    colorLabel.text = @"Color";
+
+    UITextField *brandTextField = [[UITextField alloc] init];
+    brandTextField.frame = CGRectMake(120, 80, 100, 30);
+
+    [self.view addSubview:brandTextField];
+    [self.view addSubview:sizeLabel];
+    [self.view addSubview:colorLabel];
+    [self.view addSubview:brandLabel];
+
+    UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [saveButton setTitle:@"Save" forState:UIControlStateNormal];
+    [saveButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    saveButton.frame = CGRectMake(16, 250, 100, 20);
+    [self.view addSubview:saveButton];
+
+    [saveButton addTarget:self action:@selector(saveForm) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)saveForm {
+
+    //Perform a save from the form data
 }
 
 - (void)didReceiveMemoryWarning {
