@@ -10,6 +10,8 @@
 #import "Shoesing.h"
 #import "Shoes.h"
 
+#import "ViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -73,8 +75,14 @@
     [self demoDictionary];
     [self demoSet];
     [self demoNumber];
-
     [self testShoesing];
+
+    self.window = [[UIWindow alloc] init];
+    ViewController *controller = [[ViewController alloc] init];
+    [controller.view setBackgroundColor:[UIColor greenColor]];
+    [self.window setRootViewController: controller];
+
+    [self.window makeKeyAndVisible];
 
     return YES;
 }
