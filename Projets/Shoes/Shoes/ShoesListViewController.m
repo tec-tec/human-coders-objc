@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSArray<Shoes*> *shoes;
+@property (strong, nonatomic) Shoesing *shoesing;
 
 @end
 
@@ -23,7 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.shoes = [[Shoesing demoShoeshing] allShoes];
+    self.shoesing = [Shoesing demoShoeshing];
+    self.shoes = [self.shoesing allShoes];
     [self makeUI];
 }
 
