@@ -1,0 +1,8 @@
+Apple Human Interface Guidelines
+https://developer.apple.com/ios/human-interface-guidelines/
+
+View Controller Programming Guide for iOS
+https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/index.html
+
+View Controller Catalog for iOS
+https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Introduction.html
