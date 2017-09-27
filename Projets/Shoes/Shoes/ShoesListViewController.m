@@ -33,7 +33,7 @@
     self.tableView.frame = self.view.frame;
     self.tableView.dataSource = self;
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"maCell"];
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"maCell"];
 
     [self.view addSubview:self.tableView];
 }
@@ -43,9 +43,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"maCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"maCell"];
+
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"maCell"];
+    }
 
     cell.textLabel.text = [NSString stringWithFormat:@"Cellule %@", indexPath];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Detail %@", indexPath];
 
     return cell;
 }
