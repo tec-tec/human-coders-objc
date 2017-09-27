@@ -20,6 +20,7 @@
 @property (strong, nonatomic) UILabel *sizeLabel;
 @property (strong, nonatomic) UILabel *colorLabel;
 @property (strong, nonatomic) UITextField *brandTextField;
+@property (strong, nonatomic) UITextField *colorTextField;
 @property (strong, nonatomic) UISlider *demoSlider;
 
 @property (strong, nonatomic) Shoesing *shoesing;
@@ -52,6 +53,9 @@
     self.brandTextField = [[UITextField alloc] init];
     self.brandTextField.frame = CGRectMake(120, 80, 100, 30);
 
+    self.colorTextField = [[UITextField alloc] init];
+    self.colorTextField.frame = CGRectMake(120, 200, 100, 30);
+
     self.demoSlider = [[UISlider alloc] init];
     self.demoSlider.frame = CGRectMake(16, 250, 200, 20);
     self.demoSlider.minimumValue = 0;
@@ -62,6 +66,7 @@
     [self.view addSubview:self.colorLabel];
     [self.view addSubview:self.brandLabel];
     [self.view addSubview:self.demoSlider];
+    [self.view addSubview:self.colorTextField];
 
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [saveButton setTitle:@"Save" forState:UIControlStateNormal];
@@ -76,6 +81,9 @@
 
     //Perform a save from the form data
 
+    Shoes *myShoes = [[Shoes alloc] initWithBrand:self.brandTextField.text color:self.colorTextField.text size:self.demoSlider.value andType:ShoeTypeSport];
+
+    [self.shoesing addShoes:myShoes];
 }
 
 - (void)didReceiveMemoryWarning {
