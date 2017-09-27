@@ -7,12 +7,20 @@
 //
 
 #import "ViewController.h"
+#import "Shoes.h"
+#import "Shoesing.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *demoLabel;
 
 - (IBAction)showHelloWorld:(UIButton *)sender;
+
+@property (strong, nonatomic) UILabel *brandLabel;
+@property (strong, nonatomic) UILabel *sizeLabel;
+@property (strong, nonatomic) UILabel *colorLabel;
+@property (strong, nonatomic) UITextField *brandTextField;
+@property (strong, nonatomic) UISlider *demoSlider;
 
 @end
 
@@ -27,31 +35,31 @@
 
 - (void)makeUI {
 
-    UILabel *brandLabel = [[UILabel alloc] init];
-    brandLabel.frame = CGRectMake(16, 80, 100, 30);
-    brandLabel.text = @"Brand";
+    self.brandLabel = [[UILabel alloc] init];
+    self.brandLabel.frame = CGRectMake(16, 80, 100, 30);
+    self.brandLabel.text = @"Brand";
 
-    UILabel *sizeLabel = [[UILabel alloc] init];
-    sizeLabel.frame = CGRectMake(16, 150, 100, 30);
-    sizeLabel.text = @"Size";
+    self.sizeLabel = [[UILabel alloc] init];
+    self.sizeLabel.frame = CGRectMake(16, 150, 100, 30);
+    self.sizeLabel.text = @"Size";
 
-    UILabel *colorLabel = [[UILabel alloc] init];
-    colorLabel.frame = CGRectMake(16, 200, 100, 30);
-    colorLabel.text = @"Color";
+    self.colorLabel = [[UILabel alloc] init];
+    self.colorLabel.frame = CGRectMake(16, 200, 100, 30);
+    self.colorLabel.text = @"Color";
 
-    UITextField *brandTextField = [[UITextField alloc] init];
-    brandTextField.frame = CGRectMake(120, 80, 100, 30);
+    self.brandTextField = [[UITextField alloc] init];
+    self.brandTextField.frame = CGRectMake(120, 80, 100, 30);
 
-    UISlider *demoSlider = [[UISlider alloc] init];
-    demoSlider.frame = CGRectMake(16, 250, 200, 20);
-    demoSlider.minimumValue = 0;
-    demoSlider.maximumValue = 10;
+    self.demoSlider = [[UISlider alloc] init];
+    self.demoSlider.frame = CGRectMake(16, 250, 200, 20);
+    self.demoSlider.minimumValue = 0;
+    self.demoSlider.maximumValue = 10;
 
-    [self.view addSubview:brandTextField];
-    [self.view addSubview:sizeLabel];
-    [self.view addSubview:colorLabel];
-    [self.view addSubview:brandLabel];
-    [self.view addSubview:demoSlider];
+    [self.view addSubview:self.brandTextField];
+    [self.view addSubview:self.sizeLabel];
+    [self.view addSubview:self.colorLabel];
+    [self.view addSubview:self.brandLabel];
+    [self.view addSubview:self.demoSlider];
 
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [saveButton setTitle:@"Save" forState:UIControlStateNormal];
@@ -65,6 +73,7 @@
 - (void)saveForm {
 
     //Perform a save from the form data
+
 }
 
 - (void)didReceiveMemoryWarning {
