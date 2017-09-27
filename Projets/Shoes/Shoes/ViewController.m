@@ -84,12 +84,20 @@
     //Check du formulaire
 
     if (self.brandTextField.text.length < 3) {
+        [self showAlert];
         return;
     }
 
     Shoes *myShoes = [[Shoes alloc] initWithBrand:self.brandTextField.text color:self.colorTextField.text size:self.demoSlider.value andType:ShoeTypeSport];
 
     [self.shoesing addShoes:myShoes];
+}
+
+- (void)showAlert {
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Formulaire incomplet" message:@"Votre formulaire présente des erreurs" preferredStyle:UIAlertControllerStyleAlert];
+
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
