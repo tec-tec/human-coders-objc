@@ -42,15 +42,21 @@
     UITextField *brandTextField = [[UITextField alloc] init];
     brandTextField.frame = CGRectMake(120, 80, 100, 30);
 
+    UISlider *demoSlider = [[UISlider alloc] init];
+    demoSlider.frame = CGRectMake(16, 250, 200, 20);
+    demoSlider.minimumValue = 0;
+    demoSlider.maximumValue = 10;
+
     [self.view addSubview:brandTextField];
     [self.view addSubview:sizeLabel];
     [self.view addSubview:colorLabel];
     [self.view addSubview:brandLabel];
+    [self.view addSubview:demoSlider];
 
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [saveButton setTitle:@"Save" forState:UIControlStateNormal];
     [saveButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    saveButton.frame = CGRectMake(16, 250, 100, 20);
+    saveButton.frame = CGRectMake(16, 300, 100, 20);
     [self.view addSubview:saveButton];
 
     [saveButton addTarget:self action:@selector(saveForm) forControlEvents:UIControlEventTouchUpInside];

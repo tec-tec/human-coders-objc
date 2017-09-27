@@ -79,7 +79,7 @@
 
     self.window = [[UIWindow alloc] init];
     ViewController *controller = [[ViewController alloc] init];
-    [controller.view setBackgroundColor:[UIColor greenColor]];
+    [controller.view setBackgroundColor:[UIColor whiteColor]];
     [self.window setRootViewController: controller];
 
     [self.window makeKeyAndVisible];
