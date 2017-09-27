@@ -12,3 +12,6 @@ https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPho
 
 Fucking block syntax
 http://fuckingblocksyntax.com
+
+ObjC Programming Language PDF
+http://cagt.bu.edu/w/images/b/b6/Objective-C_Programming_Language.pdf
