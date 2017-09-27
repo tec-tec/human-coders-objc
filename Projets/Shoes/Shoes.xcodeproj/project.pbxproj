@@ -15,6 +15,7 @@
 		33DB2EFC1F7A3A4A00788CA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2EFB1F7A3A4A00788CA4 /* main.m */; };
 		33DB2F041F7A443200788CA4 /* Shoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2F031F7A443200788CA4 /* Shoes.m */; };
 		33DB2F071F7A448E00788CA4 /* Shoesing.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2F061F7A448E00788CA4 /* Shoesing.m */; };
+		33DB2F1A1F7BDFBC00788CA4 /* UIColor+MoreColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2F191F7BDFBC00788CA4 /* UIColor+MoreColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		33DB2F031F7A443200788CA4 /* Shoes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shoes.m; sourceTree = "<group>"; };
 		33DB2F051F7A448E00788CA4 /* Shoesing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shoesing.h; sourceTree = "<group>"; };
 		33DB2F061F7A448E00788CA4 /* Shoesing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shoesing.m; sourceTree = "<group>"; };
+		33DB2F181F7BDFBC00788CA4 /* UIColor+MoreColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+MoreColors.h"; sourceTree = "<group>"; };
+		33DB2F191F7BDFBC00788CA4 /* UIColor+MoreColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MoreColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				33DB2EED1F7A3A4900788CA4 /* AppDelegate.m */,
 				33DB2EEF1F7A3A4900788CA4 /* ViewController.h */,
 				33DB2EF01F7A3A4A00788CA4 /* ViewController.m */,
+				33DB2F181F7BDFBC00788CA4 /* UIColor+MoreColors.h */,
+				33DB2F191F7BDFBC00788CA4 /* UIColor+MoreColors.m */,
 				33DB2F081F7A44AB00788CA4 /* Models */,
 				33DB2EF21F7A3A4A00788CA4 /* Main.storyboard */,
 				33DB2EF51F7A3A4A00788CA4 /* Assets.xcassets */,
@@ -160,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DB2F1A1F7BDFBC00788CA4 /* UIColor+MoreColors.m in Sources */,
 				33DB2F041F7A443200788CA4 /* Shoes.m in Sources */,
 				33DB2EF11F7A3A4A00788CA4 /* ViewController.m in Sources */,
 				33DB2EFC1F7A3A4A00788CA4 /* main.m in Sources */,
