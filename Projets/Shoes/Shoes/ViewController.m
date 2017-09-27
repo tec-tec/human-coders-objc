@@ -97,6 +97,12 @@
 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Formulaire incomplet" message:@"Votre formulaire présente des erreurs" preferredStyle:UIAlertControllerStyleAlert];
 
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+
+    }];
+
+    [alert addAction:ok];
+
     [self presentViewController:alert animated:YES completion:nil];
 }
 
