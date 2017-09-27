@@ -9,3 +9,6 @@ https://developer.apple.com/library/content/documentation/WindowsViews/Conceptua
 
 App Programming Guide for iOS
 https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html
+
+Fucking block syntax
+http://fuckingblocksyntax.com
