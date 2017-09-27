@@ -10,6 +10,7 @@
 
 @interface ShoesListViewController ()
 
+@property (strong, nonatomic) UITableView *tableView;
 @end
 
 @implementation ShoesListViewController
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [self makeUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +27,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)makeUI {
+
+    self.tableView = [[UITableView alloc] init];
+    self.tableView.frame = self.view.frame;
+    self.tableView.dataSource = self;
+
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"maCell"];
+
+    [self.view addSubview:self.tableView];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;
 }

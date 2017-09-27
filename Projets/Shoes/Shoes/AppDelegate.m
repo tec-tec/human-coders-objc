@@ -10,7 +10,7 @@
 #import "Shoesing.h"
 #import "Shoes.h"
 
-#import "ViewController.h"
+#import "ShoesListViewController.h"
 
 @interface AppDelegate ()
 
@@ -78,7 +78,7 @@
     [self testShoesing];
 
     self.window = [[UIWindow alloc] init];
-    ViewController *controller = [[ViewController alloc] init];
+    ShoesListViewController *controller = [[ShoesListViewController alloc] init];
     [controller.view setBackgroundColor:[UIColor whiteColor]];
     [self.window setRootViewController: controller];
 
