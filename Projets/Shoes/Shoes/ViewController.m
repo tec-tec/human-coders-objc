@@ -82,18 +82,26 @@
 
     self.brandTextField = [[UITextField alloc] init];
     self.brandLabel.translatesAutoresizingMaskIntoConstraints = NO;
-
+    [self.view addSubview:self.brandTextField];
+    [self.view addSubview:self.sizeLabel];
 
 
     self.demoSlider = [[UISlider alloc] init];
     self.demoSlider.translatesAutoresizingMaskIntoConstraints = NO;
-
     self.demoSlider.minimumValue = 0;
     self.demoSlider.maximumValue = 10;
 
-    [self.view addSubview:self.brandTextField];
-    [self.view addSubview:self.sizeLabel];
-    [self.view addSubview:self.demoSlider];
+    UILabel *sliderLabel = [[UILabel alloc] init];
+    sliderLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    sliderLabel.text = @"Pointure";
+
+    UIStackView *demoStack = [[UIStackView alloc] initWithArrangedSubviews:@[sliderLabel, self.demoSlider]];
+    demoStack.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:demoStack];
+
+    [[demoStack.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor constant:8]setActive:YES];
+    [[demoStack.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor constant:8]setActive:YES];
+    [[demoStack.topAnchor constraintEqualToAnchor:self.colorLabel.bottomAnchor constant:8]setActive:YES];
 
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     saveButton.translatesAutoresizingMaskIntoConstraints = NO;
