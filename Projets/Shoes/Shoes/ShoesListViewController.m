@@ -23,16 +23,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view
 
     self.shoesing = [Shoesing demoShoeshing];
     self.shoes = [self.shoesing allShoes];
     [self makeUI];
+
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(refresh) name:@"modelUpdated" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)refresh {
+    [self.tableView reloadData];
 }
 
 - (void)makeUI {
