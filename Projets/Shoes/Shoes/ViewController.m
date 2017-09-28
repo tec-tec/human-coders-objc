@@ -40,25 +40,31 @@
 - (void)makeUI {
 
     self.brandLabel = [[UILabel alloc] init];
-    self.brandLabel.frame = CGRectMake(16, 80, 100, 30);
+    self.brandLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.brandLabel.text = @"Brand";
 
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeTop multiplier:1 constant:16];
+    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeLeading multiplier:1 constant:8];
+    [self.brandLabel addConstraints:@[top, leading]];
+
     self.sizeLabel = [[UILabel alloc] init];
-    self.sizeLabel.frame = CGRectMake(16, 150, 100, 30);
+    self.sizeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.sizeLabel.text = @"Size";
 
     self.colorLabel = [[UILabel alloc] init];
-    self.colorLabel.frame = CGRectMake(16, 200, 100, 30);
+    self.colorLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.colorLabel.text = @"Color";
 
     self.brandTextField = [[UITextField alloc] init];
-    self.brandTextField.frame = CGRectMake(120, 80, 100, 30);
+    self.brandLabel.translatesAutoresizingMaskIntoConstraints = NO;
+
 
     self.colorTextField = [[UITextField alloc] init];
-    self.colorTextField.frame = CGRectMake(120, 200, 100, 30);
+    self.colorTextField.translatesAutoresizingMaskIntoConstraints = NO;
 
     self.demoSlider = [[UISlider alloc] init];
-    self.demoSlider.frame = CGRectMake(16, 250, 200, 20);
+    self.demoSlider.translatesAutoresizingMaskIntoConstraints = NO;
+
     self.demoSlider.minimumValue = 0;
     self.demoSlider.maximumValue = 10;
 
@@ -70,9 +76,9 @@
     [self.view addSubview:self.colorTextField];
 
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    saveButton.translatesAutoresizingMaskIntoConstraints = NO;
     [saveButton setTitle:@"Save" forState:UIControlStateNormal];
     [saveButton setTitleColor:[UIColor pinkColor] forState:UIControlStateNormal];
-    saveButton.frame = CGRectMake(16, 300, 100, 20);
     [self.view addSubview:saveButton];
 
     [saveButton addTarget:self action:@selector(saveForm) forControlEvents:UIControlEventTouchUpInside];
