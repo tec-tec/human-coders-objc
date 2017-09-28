@@ -43,6 +43,9 @@
     [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil]];
     [self.navigationItem setTitle:@"Shoes List"];
 
+    [self.navigationController.navigationBar setPrefersLargeTitles:YES];
+    self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAlways;
+
 
 //    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"maCell"];
 
