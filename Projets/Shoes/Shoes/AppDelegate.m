@@ -11,6 +11,7 @@
 #import "Shoes.h"
 
 #import "ShoesListViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -79,8 +80,9 @@
 
     self.window = [[UIWindow alloc] init];
     ShoesListViewController *controller = [[ShoesListViewController alloc] init];
+    ViewController *form = [[ViewController alloc] init];
     [controller.view setBackgroundColor:[UIColor whiteColor]];
-    [self.window setRootViewController: controller];
+    [self.window setRootViewController: form];
 
     [self.window makeKeyAndVisible];
 
