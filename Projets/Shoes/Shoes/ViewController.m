@@ -43,22 +43,24 @@
 
 - (void)makeUI {
 
+    self.view.backgroundColor = [UIColor whiteColor];
+
     self.brandLabel = [[UILabel alloc] init];
     self.brandLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.brandLabel.text = @"Brand";
 
     [self.view addSubview:self.brandLabel];
 
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeTop multiplier:1 constant:16];
-    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeLeading multiplier:1 constant:8];
-    [self.brandLabel addConstraints:@[top, leading]];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.brandLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeTop multiplier:1 constant:16];
+    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.brandLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeLeading multiplier:1 constant:8];
+    [self.view addConstraints:@[top, leading]];
 
     self.sizeLabel = [[UILabel alloc] init];
     self.sizeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.sizeLabel.text = @"Size";
     [self.view addSubview:self.sizeLabel];
 
-    [[self.sizeLabel.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:16] setActive:YES];
+    [[self.sizeLabel.centerYAnchor constraintEqualToAnchor:self.brandLabel.centerYAnchor constant:0] setActive:YES];
     [[self.sizeLabel.leadingAnchor constraintEqualToAnchor:self.brandLabel.trailingAnchor constant:16] setActive:YES];
 
     self.colorLabel = [[UILabel alloc] init];
