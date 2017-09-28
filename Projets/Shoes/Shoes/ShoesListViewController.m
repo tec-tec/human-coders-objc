@@ -40,6 +40,7 @@
     self.tableView = [[UITableView alloc] init];
     self.tableView.frame = self.view.frame;
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 
     [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showForm)]];
     [self.navigationItem setTitle:@"Shoes List"];
@@ -81,6 +82,17 @@
     cell.detailTextLabel.text = currentShoes.color;
 
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    Shoes *selectedShoes = self.shoes[indexPath.row];
+
+    UIViewController *fakeDetails = [[UIViewController alloc] init];
+    fakeDetails.view.backgroundColor = [UIColor whiteColor];
+    fakeDetails.title = selectedShoes.brand;
+
+    [self.navigationController pushViewController:fakeDetails animated:YES];
 }
 
 /*

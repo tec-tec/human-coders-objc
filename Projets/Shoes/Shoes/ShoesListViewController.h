@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShoesListViewController : UIViewController <UITableViewDataSource>
+@interface ShoesListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
