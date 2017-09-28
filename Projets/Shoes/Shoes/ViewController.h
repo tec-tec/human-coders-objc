@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class Shoesing;
+
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) Shoesing *shoesing;
