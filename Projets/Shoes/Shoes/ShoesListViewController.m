@@ -96,14 +96,24 @@
     [self.navigationController pushViewController:fakeDetails animated:YES];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
+    if ([segue.identifier isEqualToString:@"showForm"]) {
+
+        //Vers formulaire
+        ViewController *form = segue.destinationViewController;
+        form.shoesing = self.shoesing;
+
+    } else if ([segue.identifier isEqualToString:@"showDetails"]) {
+        //Vers détails
+    }
 }
-*/
+
 
 @end
