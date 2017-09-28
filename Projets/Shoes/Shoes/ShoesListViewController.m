@@ -9,6 +9,7 @@
 #import "ShoesListViewController.h"
 #import "Shoes.h"
 #import "Shoesing.h"
+#import "ViewController.h"
 
 @interface ShoesListViewController ()
 
@@ -40,7 +41,7 @@
     self.tableView.frame = self.view.frame;
     self.tableView.dataSource = self;
 
-    [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil]];
+    [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showForm)]];
     [self.navigationItem setTitle:@"Shoes List"];
 
     [self.navigationController.navigationBar setPrefersLargeTitles:YES];
@@ -51,6 +52,13 @@
 
     [self.view addSubview:self.tableView];
 }
+
+- (void)showForm {
+
+    ViewController *form = [[ViewController alloc] init];
+    [self presentViewController:form animated:YES completion:nil];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.shoes.count;
 }
