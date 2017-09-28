@@ -33,11 +33,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 
     [self makeUI];
 }
-
-
 
 - (void)makeUI {
 
@@ -47,13 +49,17 @@
 
     [self.view addSubview:self.brandLabel];
 
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeTop multiplier:1 constant:16];
-    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeLeading multiplier:1 constant:8];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeTop multiplier:1 constant:16];
+    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeLeading multiplier:1 constant:8];
     [self.brandLabel addConstraints:@[top, leading]];
 
     self.sizeLabel = [[UILabel alloc] init];
     self.sizeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.sizeLabel.text = @"Size";
+    [self.view addSubview:self.sizeLabel];
+
+    [[self.sizeLabel.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:16] setActive:YES];
+    [[self.sizeLabel.leadingAnchor constraintEqualToAnchor:self.brandLabel.trailingAnchor constant:16] setActive:YES];
 
     self.colorLabel = [[UILabel alloc] init];
     self.colorLabel.translatesAutoresizingMaskIntoConstraints = NO;
