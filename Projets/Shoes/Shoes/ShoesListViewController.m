@@ -57,6 +57,7 @@
 - (void)showForm {
 
     ViewController *form = [[ViewController alloc] init];
+    form.shoesing = self.shoesing;
 
     UIStoryboard *st = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
 //    ViewController *formStoryboard = [st instantiateViewControllerWithIdentifier:@"FormController"];

@@ -24,8 +24,6 @@
 @property (strong, nonatomic) UITextField *colorTextField;
 @property (strong, nonatomic) UISlider *demoSlider;
 
-@property (strong, nonatomic) Shoesing *shoesing;
-
 @end
 
 @implementation ViewController

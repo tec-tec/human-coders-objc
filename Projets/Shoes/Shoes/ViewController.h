@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) Shoesing *shoesing;
 
 @end
 
