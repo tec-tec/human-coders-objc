@@ -79,10 +79,12 @@
     [self testShoesing];
 
     self.window = [[UIWindow alloc] init];
-    ShoesListViewController *controller = [[ShoesListViewController alloc] init];
+    ShoesListViewController *listController = [[ShoesListViewController alloc] init];
     ViewController *form = [[ViewController alloc] init];
-    [controller.view setBackgroundColor:[UIColor whiteColor]];
-    [self.window setRootViewController: form];
+
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:listController];
+
+    [self.window setRootViewController: navController];
 
     [self.window makeKeyAndVisible];
 
