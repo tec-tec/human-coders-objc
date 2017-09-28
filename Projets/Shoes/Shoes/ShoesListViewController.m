@@ -40,6 +40,10 @@
     self.tableView.frame = self.view.frame;
     self.tableView.dataSource = self;
 
+    [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil]];
+    [self.navigationItem setTitle:@"Shoes List"];
+
+
 //    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"maCell"];
 
     [self.view addSubview:self.tableView];
