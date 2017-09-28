@@ -15,3 +15,6 @@ http://fuckingblocksyntax.com
 
 ObjC Programming Language PDF
 http://cagt.bu.edu/w/images/b/b6/Objective-C_Programming_Language.pdf
+
+Advanced Memory Management Programming Guide
+https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html
