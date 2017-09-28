@@ -37,11 +37,15 @@
     [self makeUI];
 }
 
+
+
 - (void)makeUI {
 
     self.brandLabel = [[UILabel alloc] init];
     self.brandLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.brandLabel.text = @"Brand";
+
+    [self.view addSubview:self.brandLabel];
 
     NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeTop multiplier:1 constant:16];
     NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.brandLabel attribute:NSLayoutAttributeLeading multiplier:1 constant:8];
@@ -71,7 +75,6 @@
     [self.view addSubview:self.brandTextField];
     [self.view addSubview:self.sizeLabel];
     [self.view addSubview:self.colorLabel];
-    [self.view addSubview:self.brandLabel];
     [self.view addSubview:self.demoSlider];
     [self.view addSubview:self.colorTextField];
 
