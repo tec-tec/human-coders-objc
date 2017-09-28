@@ -34,6 +34,7 @@
     //Choisir l'un ou l'autre des ajout d'observers (selector ou block)
     [center addObserver:self selector:@selector(refresh) name:@"modelUpdated" object:nil];
     [center addObserverForName:@"modelUpdated" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        self.shoes = self.shoesing.allShoes;
         [self.tableView reloadData];
     }];
 }
@@ -44,6 +45,7 @@
 }
 
 - (void)refresh {
+    self.shoes = self.shoesing.allShoes;
     [self.tableView reloadData];
 }
 
