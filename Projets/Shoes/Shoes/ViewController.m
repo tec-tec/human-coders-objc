@@ -67,12 +67,23 @@
     self.colorLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.colorLabel.text = @"Color";
 
+    self.colorTextField = [[UITextField alloc] init];
+    self.colorTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.colorTextField.backgroundColor = [UIColor redColor];
+
+    [self.view addSubview:self.colorLabel];
+    [self.view addSubview:self.colorTextField];
+
+    NSArray *hConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"|-[label(100)]-[textField]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:@{@"label":self.colorLabel, @"textField":self.colorTextField}];
+    NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[brand]-[label]" options:0 metrics:nil views:@{@"label":self.colorLabel, @"brand":self.brandLabel}];
+
+    [self.view addConstraints:hConstraints];
+    [self.view addConstraints:vConstraints];
+
     self.brandTextField = [[UITextField alloc] init];
     self.brandLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
 
-    self.colorTextField = [[UITextField alloc] init];
-    self.colorTextField.translatesAutoresizingMaskIntoConstraints = NO;
 
     self.demoSlider = [[UISlider alloc] init];
     self.demoSlider.translatesAutoresizingMaskIntoConstraints = NO;
@@ -82,9 +93,7 @@
 
     [self.view addSubview:self.brandTextField];
     [self.view addSubview:self.sizeLabel];
-    [self.view addSubview:self.colorLabel];
     [self.view addSubview:self.demoSlider];
-    [self.view addSubview:self.colorTextField];
 
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     saveButton.translatesAutoresizingMaskIntoConstraints = NO;
