@@ -131,6 +131,8 @@
     Shoes *myShoes = [[Shoes alloc] initWithBrand:self.brandTextField.text color:self.colorTextField.text size:self.demoSlider.value andType:ShoeTypeSport];
 
     [self.shoesing addShoes:myShoes];
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)showAlert {
