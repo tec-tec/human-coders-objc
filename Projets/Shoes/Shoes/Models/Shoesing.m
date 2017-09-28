@@ -32,6 +32,9 @@
 
 - (void)addShoes:(Shoes *)s {
     self.shoesArray = [self.shoesArray arrayByAddingObject:s];
+
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:@"modelUpdated" object:self userInfo:nil];
 }
 
 - (void)removeShoes:(Shoes *)s {
