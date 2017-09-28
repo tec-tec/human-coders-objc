@@ -97,6 +97,11 @@
 
     UIStackView *demoStack = [[UIStackView alloc] initWithArrangedSubviews:@[sliderLabel, self.demoSlider]];
     demoStack.translatesAutoresizingMaskIntoConstraints = NO;
+    demoStack.axis = UILayoutConstraintAxisHorizontal;
+    demoStack.distribution = UIStackViewDistributionFill;
+    demoStack.alignment = UIStackViewAlignmentCenter;
+    demoStack.spacing = 8;
+
     [self.view addSubview:demoStack];
 
     [[demoStack.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor constant:8]setActive:YES];
