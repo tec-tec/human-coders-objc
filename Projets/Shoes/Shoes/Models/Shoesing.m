@@ -78,4 +78,13 @@
     // Save data sur le disque
 }
 
++ (Shoesing *)shoesingFromArchive {
+
+    NSData *data;
+    // Get data sur le disque
+
+    Shoesing *s = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    return s;
+}
+
 @end
