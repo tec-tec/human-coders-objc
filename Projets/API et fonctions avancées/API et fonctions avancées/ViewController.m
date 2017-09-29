@@ -12,7 +12,9 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)auth:(id)sender;
+- (IBAction)network:(id)sender;
 
 @end
 
@@ -52,6 +54,31 @@
             }
         }];
     }
+}
+
+- (IBAction)network:(id)sender {
+
+    NSURLSession* session = [NSURLSession sharedSession];
+
+    // Si pas de https -> Info.plist pour configurer App Transport Security
+    NSURL * url = [NSURL URLWithString:@"https://images.apple.com/v/home/dk/images/tier-one-heroes/iphone-8/iphone_8_large.jpg"];
+    NSURLSessionTask *t = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (data) {
+            UIImage *img = [UIImage imageWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.imageView.image = img;
+            });
+
+            // SI JSON
+
+            NSError *parseError = nil;
+
+            id parsedObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+
+    [t resume];
 }
 
 @end
