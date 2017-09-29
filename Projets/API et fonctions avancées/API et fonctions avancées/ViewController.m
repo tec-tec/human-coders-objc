@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
+@import LocalAuthentication;
+
 @interface ViewController ()
+
+- (IBAction)auth:(id)sender;
 
 @end
 
@@ -25,5 +29,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)auth:(id)sender {
+
+    LAContext *myContext = [[LAContext alloc] init];
+    NSError *authError = nil;
+    NSString *demande = @"Demande";
+
+    if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+        [myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:demande reply:^(BOOL success, NSError * _Nullable error) {
+            if (success) {
+                self.view.backgroundColor = [UIColor greenColor];
+            } else {
+                self.view.backgroundColor = [UIColor redColor];
+            }
+        }];
+    }
+}
 
 @end
