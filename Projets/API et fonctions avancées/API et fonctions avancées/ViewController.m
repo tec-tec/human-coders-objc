@@ -39,9 +39,16 @@
     if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
         [myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:demande reply:^(BOOL success, NSError * _Nullable error) {
             if (success) {
-                self.view.backgroundColor = [UIColor greenColor];
+
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.view.backgroundColor = [UIColor greenColor];
+                });
+
             } else {
-                self.view.backgroundColor = [UIColor redColor];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.view.backgroundColor = [UIColor redColor];
+                });
+
             }
         }];
     }
