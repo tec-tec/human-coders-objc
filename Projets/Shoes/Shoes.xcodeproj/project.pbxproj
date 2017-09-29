@@ -38,6 +38,7 @@
 		33DB2F191F7BDFBC00788CA4 /* UIColor+MoreColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MoreColors.m"; sourceTree = "<group>"; };
 		33DB2F1B1F7BE66800788CA4 /* ShoesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoesListViewController.h; sourceTree = "<group>"; };
 		33DB2F1C1F7BE66800788CA4 /* ShoesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoesListViewController.m; sourceTree = "<group>"; };
+		33E7E0821F7E312E007EC618 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 		33DB2EEB1F7A3A4900788CA4 /* Shoes */ = {
 			isa = PBXGroup;
 			children = (
+				33E7E0821F7E312E007EC618 /* Constant.h */,
 				33DB2EEC1F7A3A4900788CA4 /* AppDelegate.h */,
 				33DB2EED1F7A3A4900788CA4 /* AppDelegate.m */,
 				33DB2EEF1F7A3A4900788CA4 /* ViewController.h */,
