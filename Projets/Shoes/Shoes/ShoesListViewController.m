@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view
 
-    self.shoesing = [Shoesing demoShoeshing];
+    self.shoesing = [Shoesing shoesingFromArchive];
     self.shoes = [self.shoesing allShoes];
     [self makeUI];
 

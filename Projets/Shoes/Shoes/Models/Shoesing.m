@@ -99,7 +99,7 @@
         return s;
     }
 
-    return nil;
+    return [[Shoesing alloc] init];
 }
 
 + (NSURL *)documentDirectoryURL {

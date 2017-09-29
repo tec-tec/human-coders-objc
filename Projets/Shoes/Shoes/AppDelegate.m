@@ -98,7 +98,7 @@
     [self demoDictionary];
     [self demoSet];
     [self demoNumber];
-    [self testShoesing];
+//    [self testShoesing];
 //    [self saveNameInDefaults:@"Ludovic"];
     [self readDefaults];
     

@@ -16,4 +16,6 @@
 - (nonnull NSArray<Shoes*> *)allShoes;
 
 + (nonnull Shoesing *)demoShoeshing;
++ (nonnull Shoesing *)shoesingFromArchive;
+
 @end
