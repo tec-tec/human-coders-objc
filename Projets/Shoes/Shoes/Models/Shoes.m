@@ -58,4 +58,19 @@
     return [NSString stringWithFormat:@"Chaussure de marque %@, pointure: %d, %p", self.brand, self.size, self];
 }
 
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+
+    [aCoder encodeObject:self.brand forKey:@"brand"];
+    [aCoder encodeObject:self.color forKey:@"color"];
+    [aCoder encodeObject:self.uuid forKey:@"uuid"];
+    [aCoder encodeInt:self.size forKey:@"size"];
+    [aCoder encodeInteger:self.type forKey:@"type"];
+    [aCoder encodeBool:self.worn forKey:@"worn"];
+
+}
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+
+    
+}
+
 @end

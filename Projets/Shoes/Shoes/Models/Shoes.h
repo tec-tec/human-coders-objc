@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, ShoeType) {
     ShoeTypeFlipFlopSandals
 };
 
-@interface Shoes : NSObject
+@interface Shoes : NSObject <NSCoding>
 
 @property (strong, nonatomic) NSString *brand;
 @property (strong, nonatomic) NSString *color;
