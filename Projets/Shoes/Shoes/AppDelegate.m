@@ -77,7 +77,18 @@
 //    [NSUserDefaults alloc] initWithSuiteName:
 
     [prefs setObject:name forKey:UserDefaultsKeyFirstName];
+    [prefs setBool:YES forKey:@"onboardingDone"];
     [prefs synchronize];
+}
+
+- (void)readDefaults {
+
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *name =[prefs stringForKey:UserDefaultsKeyFirstName];
+    BOOL done = [prefs boolForKey:@"onboardingDone"];
+
+    NSLog(@"Done : %d, name :  %@", done, name);
+
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -88,8 +99,9 @@
     [self demoSet];
     [self demoNumber];
     [self testShoesing];
-    [self saveNameInDefaults:@"Ludovic"];
-
+//    [self saveNameInDefaults:@"Ludovic"];
+    [self readDefaults];
+    
     self.window = [[UIWindow alloc] init];
     ShoesListViewController *listController = [[ShoesListViewController alloc] init];
     ViewController *form = [[ViewController alloc] init];
