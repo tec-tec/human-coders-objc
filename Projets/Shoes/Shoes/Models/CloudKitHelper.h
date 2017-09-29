@@ -13,5 +13,6 @@
 @interface CloudKitHelper : NSObject
 
 - (void)cloudifyShoes:(Shoes*)s;
+- (void)whiteShoes;
 
 @end

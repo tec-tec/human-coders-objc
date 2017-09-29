@@ -37,4 +37,22 @@
     }];
 }
 
+- (void)whiteShoes {
+
+    CKContainer *defaultContainer = [CKContainer defaultContainer];
+    CKDatabase *privateDb = [defaultContainer privateCloudDatabase];
+
+    NSPredicate *whitePred = [NSPredicate predicateWithFormat:@"color == %@", @"White"];
+    CKQuery *whiteQuery = [[CKQuery alloc] initWithRecordType:@"Shoes" predicate:whitePred];
+
+    [privateDb performQuery:whiteQuery inZoneWithID:nil completionHandler:^(NSArray<CKRecord *> * _Nullable results, NSError * _Nullable error) {
+
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            NSLog(@"%@", results);
+        }
+    }];
+}
+
 @end

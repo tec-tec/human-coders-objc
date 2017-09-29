@@ -29,6 +29,7 @@
 }
 
 - (NSArray<Shoes *> *)allShoes {
+    [self.cloudHelper whiteShoes];
     return [self.shoesArray copy];
 }
 
