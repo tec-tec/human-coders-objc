@@ -12,6 +12,7 @@
 
 #import "ShoesListViewController.h"
 #import "ViewController.h"
+#import "Constant.h"
 
 @interface AppDelegate ()
 
@@ -69,6 +70,16 @@
     NSLog(@"%ld",[[s allShoes] count]);
 }
 
+- (void)saveNameInDefaults:(NSString *)name {
+
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+// En cas d'utilisation d'app group pour partager entre plusieurs apps
+//    [NSUserDefaults alloc] initWithSuiteName:
+
+    [prefs setObject:name forKey:UserDefaultsKeyFirstName];
+    [prefs synchronize];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
@@ -77,6 +88,7 @@
     [self demoSet];
     [self demoNumber];
     [self testShoesing];
+    [self saveNameInDefaults:@"Ludovic"];
 
     self.window = [[UIWindow alloc] init];
     ShoesListViewController *listController = [[ShoesListViewController alloc] init];
