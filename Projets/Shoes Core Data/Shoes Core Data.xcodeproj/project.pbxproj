@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33B6E85B1F7E78840001DB26 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B6E85A1F7E78840001DB26 /* CoreDataManager.m */; };
 		33E7E0981F7E728A007EC618 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E7E0971F7E728A007EC618 /* AppDelegate.m */; };
 		33E7E09B1F7E728A007EC618 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E7E09A1F7E728A007EC618 /* ViewController.m */; };
 		33E7E09E1F7E728A007EC618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E7E09C1F7E728A007EC618 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33B6E8591F7E78840001DB26 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		33B6E85A1F7E78840001DB26 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		33E7E0931F7E728A007EC618 /* Shoes Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoes Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E7E0961F7E728A007EC618 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33E7E0971F7E728A007EC618 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 			children = (
 				33E7E0961F7E728A007EC618 /* AppDelegate.h */,
 				33E7E0971F7E728A007EC618 /* AppDelegate.m */,
+				33B6E8591F7E78840001DB26 /* CoreDataManager.h */,
+				33B6E85A1F7E78840001DB26 /* CoreDataManager.m */,
 				33E7E0991F7E728A007EC618 /* ViewController.h */,
 				33E7E09A1F7E728A007EC618 /* ViewController.m */,
 				33E7E09C1F7E728A007EC618 /* Main.storyboard */,
@@ -147,6 +152,7 @@
 			files = (
 				33E7E09B1F7E728A007EC618 /* ViewController.m in Sources */,
 				33E7E0981F7E728A007EC618 /* AppDelegate.m in Sources */,
+				33B6E85B1F7E78840001DB26 /* CoreDataManager.m in Sources */,
 				33E7E0A91F7E728A007EC618 /* main.m in Sources */,
 				33E7E0A11F7E728A007EC618 /* Shoes_Core_Data.xcdatamodeld in Sources */,
 			);
