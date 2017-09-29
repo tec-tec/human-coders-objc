@@ -72,4 +72,10 @@
     return  self;
 }
 
+- (void)save {
+
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
+    // Save data sur le disque
+}
+
 @end
