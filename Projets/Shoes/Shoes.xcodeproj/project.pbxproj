@@ -17,6 +17,7 @@
 		33DB2F071F7A448E00788CA4 /* Shoesing.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2F061F7A448E00788CA4 /* Shoesing.m */; };
 		33DB2F1A1F7BDFBC00788CA4 /* UIColor+MoreColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2F191F7BDFBC00788CA4 /* UIColor+MoreColors.m */; };
 		33DB2F1D1F7BE66800788CA4 /* ShoesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2F1C1F7BE66800788CA4 /* ShoesListViewController.m */; };
+		33E7E0861F7E519F007EC618 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E7E0851F7E519F007EC618 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		33DB2F1B1F7BE66800788CA4 /* ShoesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoesListViewController.h; sourceTree = "<group>"; };
 		33DB2F1C1F7BE66800788CA4 /* ShoesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoesListViewController.m; sourceTree = "<group>"; };
 		33E7E0821F7E312E007EC618 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		33E7E0831F7E519B007EC618 /* Shoes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoes.entitlements; sourceTree = "<group>"; };
+		33E7E0851F7E519F007EC618 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E7E0861F7E519F007EC618 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 			children = (
 				33DB2EEB1F7A3A4900788CA4 /* Shoes */,
 				33DB2EEA1F7A3A4900788CA4 /* Products */,
+				33E7E0841F7E519F007EC618 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +76,7 @@
 		33DB2EEB1F7A3A4900788CA4 /* Shoes */ = {
 			isa = PBXGroup;
 			children = (
+				33E7E0831F7E519B007EC618 /* Shoes.entitlements */,
 				33E7E0821F7E312E007EC618 /* Constant.h */,
 				33DB2EEC1F7A3A4900788CA4 /* AppDelegate.h */,
 				33DB2EED1F7A3A4900788CA4 /* AppDelegate.m */,
@@ -99,6 +105,14 @@
 				33DB2F061F7A448E00788CA4 /* Shoesing.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		33E7E0841F7E519F007EC618 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33E7E0851F7E519F007EC618 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +147,14 @@
 					33DB2EE81F7A3A4900788CA4 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -312,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Shoes/Shoes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = Shoes/Info.plist;
@@ -326,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Shoes/Shoes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = Shoes/Info.plist;
