@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class Shoes;
 
-@interface Shoesing : NSObject
+@interface Shoesing : NSObject <NSCoding>
 
 - (void)addShoes:(nonnull Shoes *)s;
 - (void)removeShoes:(nonnull Shoes *)s;

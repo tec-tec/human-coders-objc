@@ -60,4 +60,16 @@
     return s;
 }
 
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    [aCoder encodeObject:self.shoesArray forKey:@"shoesArray"];
+}
+
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        self.shoesArray = [aDecoder decodeObjectForKey:@"shoesArray"];
+    }
+    return  self;
+}
+
 @end
