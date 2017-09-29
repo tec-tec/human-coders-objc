@@ -8,10 +8,12 @@
 
 #import "Shoesing.h"
 #import "Shoes.h"
+#import "CloudKitHelper.h"
 
 @interface Shoesing ()
 
 @property (strong, nonatomic) NSArray<Shoes *> *shoesArray;
+@property (strong, nonatomic) CloudKitHelper *cloudHelper;
 
 @end
 
@@ -37,6 +39,7 @@
     [center postNotificationName:@"modelUpdated" object:self userInfo:nil];
 
     [self save];
+    [self.cloudHelper cloudifyShoes:s];
 }
 
 - (void)removeShoes:(Shoes *)s {
@@ -110,4 +113,11 @@
     return [urls firstObject];
 }
 
+-(CloudKitHelper *)cloudHelper {
+
+    if (_cloudHelper == nil) {
+        _cloudHelper = [[CloudKitHelper alloc] init];
+    }
+    return  _cloudHelper;
+}
 @end

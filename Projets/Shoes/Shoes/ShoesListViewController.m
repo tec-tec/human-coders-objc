@@ -37,6 +37,9 @@
         self.shoes = self.shoesing.allShoes;
         [self.tableView reloadData];
     }];
+
+    Shoes *s = [[Shoes alloc] initWithBrand:@"Nike Air" color:@"White" size:78 andType:ShoeTypeSport];
+    [self.shoesing addShoes:s];
 }
 
 - (void)didReceiveMemoryWarning {

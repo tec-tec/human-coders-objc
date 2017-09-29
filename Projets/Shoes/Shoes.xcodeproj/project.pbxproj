@@ -18,6 +18,7 @@
 		33DB2F1A1F7BDFBC00788CA4 /* UIColor+MoreColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2F191F7BDFBC00788CA4 /* UIColor+MoreColors.m */; };
 		33DB2F1D1F7BE66800788CA4 /* ShoesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DB2F1C1F7BE66800788CA4 /* ShoesListViewController.m */; };
 		33E7E0861F7E519F007EC618 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E7E0851F7E519F007EC618 /* CloudKit.framework */; };
+		33E7E0891F7E527A007EC618 /* CloudKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E7E0881F7E527A007EC618 /* CloudKitHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		33E7E0821F7E312E007EC618 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		33E7E0831F7E519B007EC618 /* Shoes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoes.entitlements; sourceTree = "<group>"; };
 		33E7E0851F7E519F007EC618 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		33E7E0871F7E527A007EC618 /* CloudKitHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudKitHelper.h; sourceTree = "<group>"; };
+		33E7E0881F7E527A007EC618 /* CloudKitHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudKitHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				33DB2F031F7A443200788CA4 /* Shoes.m */,
 				33DB2F051F7A448E00788CA4 /* Shoesing.h */,
 				33DB2F061F7A448E00788CA4 /* Shoesing.m */,
+				33E7E0871F7E527A007EC618 /* CloudKitHelper.h */,
+				33E7E0881F7E527A007EC618 /* CloudKitHelper.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			files = (
 				33DB2F1A1F7BDFBC00788CA4 /* UIColor+MoreColors.m in Sources */,
 				33DB2F041F7A443200788CA4 /* Shoes.m in Sources */,
+				33E7E0891F7E527A007EC618 /* CloudKitHelper.m in Sources */,
 				33DB2EF11F7A3A4A00788CA4 /* ViewController.m in Sources */,
 				33DB2EFC1F7A3A4A00788CA4 /* main.m in Sources */,
 				33DB2F071F7A448E00788CA4 /* Shoesing.m in Sources */,
