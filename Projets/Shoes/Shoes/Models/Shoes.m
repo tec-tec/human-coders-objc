@@ -68,9 +68,19 @@
     [aCoder encodeBool:self.worn forKey:@"worn"];
 
 }
-- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
 
-    
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        self.brand = [aDecoder decodeObjectForKey:@"brand"];
+        self.color = [aDecoder decodeObjectForKey:@"color"];
+        self.uuid = [aDecoder decodeObjectForKey:@"uuid"];
+
+        self.size = [aDecoder decodeIntForKey:@"size"];
+        self.type = [aDecoder decodeIntegerForKey:@"type"];
+        self.worn = [aDecoder decodeBoolForKey:@"worn"];
+    }
+    return self;
 }
 
 @end
