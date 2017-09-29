@@ -34,12 +34,12 @@
     // On utilise initWithContext pour créer l'objet dans le bon contexte
     Shoes *s = [[Shoes alloc] initWithContext:context];
     s.brand = @"Nike";
-    s.color = @"White";
+    s.color = @"Black";
     s.size = 43;
 
     Shoesing *shoesing = [[Shoesing alloc] initWithContext:context];
     shoesing.name = @"Mon Shoesing";
-    shoesing.location = @"New-York";
+    shoesing.location = @"Paris";
 
     [shoesing addShoesObject:s];
 
@@ -52,7 +52,11 @@
     NSPersistentContainer *container = manager.persistentContainer;
     NSManagedObjectContext *context = container.viewContext;
 
+    NSString *pattern = @"whi";
+
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"color CONTAINS[cd] %@", pattern];
     NSFetchRequest *request = [Shoes fetchRequest];
+    [request setPredicate:pred];
 
     NSError *error = nil;
     NSArray *result = [context executeFetchRequest:request error:&error];
