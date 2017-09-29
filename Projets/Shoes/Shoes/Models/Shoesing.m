@@ -35,12 +35,19 @@
 
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center postNotificationName:@"modelUpdated" object:self userInfo:nil];
+
+    [self save];
 }
 
 - (void)removeShoes:(Shoes *)s {
     NSMutableArray<Shoes*> *mutCopy = self.shoesArray.mutableCopy;
     [mutCopy removeObject:s];
     self.shoesArray = [NSArray arrayWithArray:mutCopy];
+
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:@"modelUpdated" object:self userInfo:nil];
+
+    [self save];
 }
 
 + (nonnull Shoesing *)demoShoeshing {
