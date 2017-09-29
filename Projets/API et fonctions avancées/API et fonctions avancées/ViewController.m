@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    self.imageView.alpha = 0;
 }
 
 
@@ -67,6 +69,11 @@
             UIImage *img = [UIImage imageWithData:data];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.imageView.image = img;
+
+                [UIView animateWithDuration:5 animations:^{
+                    self.imageView.alpha = 1;
+                }];
+
             });
 
             // SI JSON
