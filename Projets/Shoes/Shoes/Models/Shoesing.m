@@ -75,16 +75,32 @@
 - (void)save {
 
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
-    // Save data sur le disque
+    NSURL *archiveURL = [[Shoesing documentDirectoryURL] URLByAppendingPathComponent:@"archivedShoesing.plist"];
+
+    [data writeToURL:archiveURL atomically:YES];
 }
 
 + (Shoesing *)shoesingFromArchive {
 
-    NSData *data;
-    // Get data sur le disque
+    NSURL *archiveURL = [[self documentDirectoryURL] URLByAppendingPathComponent:@"archivedShoesing.plist"];
+
+    NSData *data = [NSData dataWithContentsOfURL:archiveURL];
 
     Shoesing *s = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    return s;
+
+    if ([s isKindOfClass:[Shoesing class]]) {
+        return s;
+    }
+
+    return nil;
+}
+
++ (NSURL *)documentDirectoryURL {
+
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray *urls = [fm URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+
+    return [urls firstObject];
 }
 
 @end
