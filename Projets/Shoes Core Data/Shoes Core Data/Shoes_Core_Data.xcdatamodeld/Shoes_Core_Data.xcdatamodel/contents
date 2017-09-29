@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13528" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Shoes" representedClassName="Shoes" syncable="YES" codeGenerationType="class">
+        <attribute name="brand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="shoesing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shoesing" inverseName="shoes" inverseEntity="Shoesing" syncable="YES"/>
+    </entity>
+    <entity name="Shoesing" representedClassName="Shoesing" syncable="YES" codeGenerationType="class">
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shoes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Shoes" inverseName="shoesing" inverseEntity="Shoes" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Shoes" positionX="196" positionY="-15" width="128" height="105"/>
+        <element name="Shoesing" positionX="-81" positionY="-0" width="128" height="88"/>
+    </elements>
 </model>
